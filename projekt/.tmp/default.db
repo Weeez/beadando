@@ -1,0 +1,133 @@
+{
+  "data": {
+    "error": [
+      {
+        "status": "new",
+        "location": "qqq",
+        "description": "www",
+        "date": "2015-10-05T08:45:44.674Z",
+        "createdAt": "2015-10-05T08:45:44.676Z",
+        "updatedAt": "2015-10-05T08:45:44.676Z",
+        "id": 1
+      },
+      {
+        "status": "new",
+        "location": "pc6",
+        "description": "rossz",
+        "date": "2015-10-12T09:46:37.739Z",
+        "createdAt": "2015-10-12T09:46:37.739Z",
+        "updatedAt": "2015-10-12T09:46:37.739Z",
+        "id": 2
+      },
+      {
+        "status": "new",
+        "location": "pc6",
+        "description": "rossz",
+        "date": "2015-10-12T09:47:04.177Z",
+        "createdAt": "2015-10-12T09:47:04.177Z",
+        "updatedAt": "2015-10-12T09:47:04.177Z",
+        "id": 3
+      }
+    ],
+    "user": [
+      {
+        "surname": "Balázs",
+        "forename": "András",
+        "neptun": "qo728i",
+        "password": "$2a$10$t.lJGeXtyIXaK21KuEDg6.qtT33bcD0DOzUgX9wmFhoDvhLB3RLYa",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-12T09:19:47.270Z",
+        "updatedAt": "2015-10-12T09:19:47.270Z",
+        "id": 2
+      }
+    ]
+  },
+  "schema": {
+    "error": {
+      "date": {
+        "type": "datetime"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "new",
+          "assigned",
+          "success",
+          "rejected",
+          "pending"
+        ]
+      },
+      "location": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "neptun": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "surname": {
+        "type": "string"
+      },
+      "forename": {
+        "type": "string"
+      },
+      "avatar": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "riporter",
+          "operator"
+        ],
+        "defaultsTo": "riporter"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "error": {
+      "id": 3
+    },
+    "user": {
+      "id": 2
+    }
+  }
+}
