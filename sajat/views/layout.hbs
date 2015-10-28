@@ -6,7 +6,7 @@
     <title>Tárgyfelvétel</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
- 
+     <!--<link rel="stylesheet" href="/css/bootstrap.min.css"/>-->
   </HEAD>
   <BODY>
     <div class="container">
@@ -15,11 +15,12 @@
             <li><p class="navbar-text">Üdv, {{user}}!</p></li>
             <li><a href="#">Kijelentkezés</a></li>
           {{else}}
-            <li><a href="#">Bejelentkezés</a></li>
+            <li><a href="/login">Bejelentkezés</a></li>
             <li><a href="/registration">Regisztráció</a></li>
           {{/if}}
-          <li><a href="#">Tárgyfelvétel</a></li>
-          <li><a href="#">Rólunk</a></li>
+          <li><a href="/list">Tárgyfelvétel</a></li>
+          <li><a href="/new">Új Tárgy hozzáadása</a></li>
+          <li><a href="/about">Rólunk</a></li>
       </ul>
       <div class="row">
           {{{body}}}
@@ -27,4 +28,5 @@
     </div>    
 
   </BODY>
+      <!--<script src="/js/bootstrap.min.js"></script>-->
 </HTML>

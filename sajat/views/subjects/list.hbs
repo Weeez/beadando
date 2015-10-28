@@ -1,0 +1,30 @@
+<div class="container">
+  
+  <h2>Tantárgyak</h2>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th>chbox</th>
+        <th>Tárgy neve</th>
+        <th>Tárgy kódja</th>
+        <th>helyek száma</th>
+        <th>helyszín</th>
+        <th>Oktató</th>
+      </tr>
+    </thead>
+    <tbody>
+        {{#each subjects}}
+        <tr>
+            <td>{{chbox}}</td>
+            <td>{{subject_name}}</td>
+            <td>{{subject_code}}</td>
+            <td>{{subject_size}}</td>
+            <td>{{subject_location}}</td>
+            <td>{{subject_teacher}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+    </tbody>
+  </table>
+</div>
