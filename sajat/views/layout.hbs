@@ -11,6 +11,7 @@
   <BODY>
     <div class="container">
       <ul class="nav nav-pills">
+          <li><a href="/">Főoldal</a></li>
           {{#if loggedIn}}
             <li><p class="navbar-text">Üdv, {{user}}!</p></li>
             <li><a href="#">Kijelentkezés</a></li>
@@ -18,8 +19,8 @@
             <li><a href="/login">Bejelentkezés</a></li>
             <li><a href="/registration">Regisztráció</a></li>
           {{/if}}
-          <li><a href="/list">Tárgyfelvétel</a></li>
-          <li><a href="/new">Új Tárgy hozzáadása</a></li>
+          <li><a href="/subjects/list">Tárgyfelvétel</a></li>
+          <li><a href="/subjects/new">Új Tárgy hozzáadása</a></li>
           <li><a href="/about">Rólunk</a></li>
       </ul>
       <div class="row">

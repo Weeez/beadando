@@ -12,11 +12,9 @@ var app = express();
 //routers
 var indexRouter = require('./controllers/indexRouter.js');
 var regRouter = require('./controllers/regRouter.js');
-var newRouter = require('./controllers/newRouter.js');
-var listRouter = require('./controllers/listRouter.js');
+var subjectsRouter = require('./controllers/subjectsRouter.js');
 var loginRouter = require('./controllers/loginRouter.js');
 var aboutRouter = require('./controllers/aboutRouter.js');
-
 
 //hbs
 app.set('views', './views');
@@ -44,14 +42,15 @@ app.use(function(req,res,next){
 
 
 app.get('/registration', regRouter);
+app.post('/registration', regRouter);
 app.get('/login', loginRouter);
-app.use('/new',newRouter);
-app.get('/list',listRouter);
+app.post('/login', loginRouter);
+app.get('/subjects/new',subjectsRouter);
+app.post('/subjects/new',subjectsRouter);
+app.get('/subjects/list',subjectsRouter);
+//app.post('/subjects/list',subjectsRouter);
 app.get('/about',aboutRouter);
 app.get('/', indexRouter);
-
-
-
 
 
 //error handlers

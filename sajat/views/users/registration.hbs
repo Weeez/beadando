@@ -1,11 +1,44 @@
-<form role="form">
-  <div class="form-group">
-    <label for="neptun">Adja meg a használni kívánt neptun kódját!</label>
-    <input type="text" class="form-control" id="neptun">
-  </div>
-  <div class="form-group">
-    <label for="pwd">Adja meg a jelszavát:</label>
-    <input type="password" class="form-control" id="pwd">
-  </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+<div class="page-header">
+    <h1>Regisztráció</h1>
+</div>
+
+<form class="form-horizontal" method="post">
+  <fieldset>
+    <div class="form-group
+        {{#if validationErrors.neptun}}
+            has-error
+        {{/if}}
+    ">    
+    
+      <label for="neptun">Adja meg a használni kívánt neptun kódját!</label>    
+      <div class="col-lg-10">
+        <input class="form-control" id="neptun" name="neptun" placeholder="pl. ABC123, stb..." type="text" value="{{data.neptun}}">
+        {{#if validationErrors.neptun}}
+            <span class="help-block">{{validationErrors.neptun.msg}}</span>
+        {{/if}}            
+      </div>
+    </div>
+    
+    
+    <div class="form-group
+        {{#if validationErrors.pwd}}
+            has-error
+        {{/if}}
+    ">        
+    
+      <label for="pwd">Adja meg a jelszavát:</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="pwd" name="pwd" type="password" value="{{data.pwd}}">
+        {{#if validationErrors.pwd}}
+            <span class="help-block">{{validationErrors.pwd.msg}}</span>
+        {{/if}}
+      </div>
+    </div>    
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+  <fieldset>    
 </form>
