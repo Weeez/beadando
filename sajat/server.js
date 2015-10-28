@@ -1,13 +1,14 @@
 //requires
-var http = require('http');
 var express = require('express');
-var testRouter = require('./controllers/testRouter.js');
-var indexRouter = require('./controllers/indexRouter.js');
-
 
 //dependencies
 var app = express();
-var port = process.env.PORT || 3000;
+//var http = require('http');
+
+//routers
+var testRouter = require('./controllers/testRouter.js');
+var indexRouter = require('./controllers/indexRouter.js');
+var regRouter = require('./controllers/regRouter.js');
 
 
 //hbs
@@ -19,14 +20,22 @@ app.set('view engine', 'hbs');
 app.use(express.static('public'));
 
 //minden utvonalra lefut
-app.use(function(req,res,next){
+/*
+app.use(function(req,res){
     console.log('inic');
-    next();
-});
+        res.render('index');
+});*/
 
-//routers
+//endpoints
+app.use(function(req,res,next){
+  res.locals.loggedIn = false;
+  res.locals.user = "Test";
+  next();
+});
 app.use('/testRouter', testRouter);
 app.use('/', indexRouter);
+app.get('/registration', regRouter);
+
 
 
 
@@ -36,4 +45,7 @@ app.use(function(err, req, res, next) {
   res.status(500).send('Szerveroldali hiba!');
 });
 
-http.createServer(app).listen(port);
+
+var port = process.env.PORT || 3000;
+//http.createServer(app).listen(port);
+app.listen(port);

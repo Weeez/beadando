@@ -9,6 +9,7 @@ var waterlineConfig = require('./config/waterline');
 var errorCollection = require('./models/error');
 var userCollection = require('./models/user');
 
+//routers
 var indexRouter = require('./controllers/index');
 var errorRouter = require('./controllers/errors');
 var loginRouter = require('./controllers/login');
