@@ -4,46 +4,25 @@ var router = express.Router();
 //Model layer
 var hasNewSubject = false;
 
-var subjects = [
-            {
-                chbox: 'XXX',
-                subject_name: 'Análízis 69',
-                subject_code: 'leviosaaa',
-                subject_size: '2',
-                subject_location: 'szereposztó dívány',
-                subject_teacher: 'Sprint Elek'
-            },
-            {
-                chbox: 'X',
-                subject_name: 'Tantárgyacska',
-                subject_code: 'Tgyk1',
-                subject_size: '20',
-                subject_location: 'Déli',
-                subject_teacher: 'Teszt Elek'
-            },
-            {
-                chbox: 'X',
-                subject_name: 'Almafa ültetés',
-                subject_code: 'Afk',
-                subject_size: '10',
-                subject_location: 'Északi',
-                subject_teacher: 'Rum Aroma'
-            },
-        ];
 
 router.get('/subjects/list', function(req,res){
-    if(hasNewSubject){
-        hasNewSubject = false;
-        req.flash('info', 'Tantárgy sikeresen felvéve!');
-        res.render('subjects/list', {
-            subjects: subjects,
-            messages: req.flash('info'),
-        });
-    }else{
-        res.render('subjects/list', {
-            subjects: subjects,
-        });         
-    }
+
+    req.app.models.subject.find().then(function(subjectses){
+        //megjelenites
+        
+        if(hasNewSubject){
+            hasNewSubject = false;
+            req.flash('info', 'Tantárgy sikeresen felvéve!');
+            res.render('subjects/list', {
+                subjects: subjectses,
+                messages: req.flash('info'),
+            });
+        }else{
+            res.render('subjects/list', {
+                subjects: subjectses
+            });                
+        }
+    });
 });
 
 router.get('/subjects/new', function(req,res){
@@ -79,19 +58,23 @@ router.post('/subjects/new', function (req, res) {
     }
     else {
         // adatok elmentése (ld. később) és a hibalista megjelenítése
-        subjects.push({
-            chbox : 'x',
+        
+        req.app.models.subject.create({
+            chbox: 'x',
             subject_name: req.body.subject_name,
             subject_code: req.body.subject_code,
             subject_size: req.body.subject_size,
             subject_location: req.body.subject_location,
-            subject_teacher: req.body.subject_teacher,
+            subject_teacher: req.body.subject_teacher
+        })
+        .then(function (subject) {
+            //siker
+            res.redirect('/subjects/list');
+        })
+        .catch(function (err) {
+            //hiba
+            console.log(err);
         });
-        /*res.render('subjects/list', {
-            subjects: subjects
-        });
-        */
-        res.redirect('/subjects/list');
     }    
 });
 

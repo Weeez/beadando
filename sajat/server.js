@@ -5,8 +5,16 @@ var expressValidator = require('express-validator');
 var session = require('express-session');
 var flash = require('connect-flash');
 
+var Waterline = require('waterline');
+var config = require('./config/config');
+
+var subjectCollection = require('./models/subject');
+
 //dependencies
 var app = express();
+
+
+
 //var http = require('http');
 
 //routers
@@ -22,7 +30,7 @@ app.set('view engine', 'hbs');
 
 
 //MiddleWares
-app.use(express.static('public'));
+app.use(express.static('public '));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(session({
@@ -43,6 +51,7 @@ app.use(function(req,res,next){
 
 app.get('/registration', regRouter);
 app.post('/registration', regRouter);
+//app.use('/registration', regRouter);
 app.get('/login', loginRouter);
 app.post('/login', loginRouter);
 app.get('/subjects/new',subjectsRouter);
@@ -59,7 +68,23 @@ app.use(function(err, req, res, next) {
   res.status(500).send('Szerveroldali hiba!');
 });
 
+// ORM instance
+var orm = new Waterline();
 
-var port = process.env.PORT || 3000;
-//http.createServer(app).listen(port);
-app.listen(port);
+orm.loadCollection(Waterline.Collection.extend(subjectCollection));
+
+// ORM indítása
+orm.initialize(config, function(err, models) {
+    if(err) throw err;
+    
+    app.models = models.collections;
+    app.connections = models.connections;
+    
+    // Start Server
+    var port = process.env.PORT || 3000;
+    app.listen(port, function () {
+        console.log('Server is started.');
+    });
+    
+    console.log("ORM is started.");
+});

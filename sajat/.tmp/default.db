@@ -1,0 +1,67 @@
+{
+  "data": {
+    "subject": [
+      {
+        "chbox": "x",
+        "subject_name": "Análizis 69",
+        "subject_code": "levoisaaa",
+        "subject_size": "2",
+        "subject_location": "Szereposztó Divány",
+        "subject_teacher": "Sprint Elek",
+        "createdAt": "2015-10-29T12:10:37.776Z",
+        "updatedAt": "2015-10-29T12:10:37.776Z",
+        "id": 5
+      },
+      {
+        "chbox": "x",
+        "subject_name": "Test tárgy",
+        "subject_code": "tst01",
+        "subject_size": "10",
+        "subject_location": "Északi",
+        "subject_teacher": "Béla",
+        "createdAt": "2015-10-29T12:18:17.568Z",
+        "updatedAt": "2015-10-29T12:18:17.568Z",
+        "id": 10
+      }
+    ]
+  },
+  "schema": {
+    "subject": {
+      "chbox": {
+        "type": "string"
+      },
+      "subject_name": {
+        "type": "string"
+      },
+      "subject_code": {
+        "type": "string"
+      },
+      "subject_size": {
+        "type": "string"
+      },
+      "subject_location": {
+        "type": "string"
+      },
+      "subject_teacher": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "subject": {
+      "id": 10
+    }
+  }
+}
