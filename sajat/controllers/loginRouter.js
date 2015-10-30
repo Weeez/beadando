@@ -15,7 +15,9 @@ router.post('/login', passport.authenticate('local', {
     failureRedirect: '/login',
     failureFlash: true,
     badRequestMessage: 'Hiányzó adatok'
-}));
+}),function(req,res){
+    console.log("dafuq");
+});
 
 /*
 router.get('/login', function(req,res){
@@ -32,7 +34,7 @@ router.post('/login', function(req,res){
     
     // adatok ellenőrzése
     req.checkBody('neptun', 'Hibás Neptunkód').notEmpty().withMessage('Kötelező megadni!');
-    req.checkBody('pwd', 'Hibás Jelszó').notEmpty().withMessage('Kötelező megadni!');        
+    req.checkBody('password', 'Hibás Jelszó').notEmpty().withMessage('Kötelező megadni!');        
     
     var validationErrors = req.validationErrors(true);
     console.log(validationErrors);

@@ -1,3 +1,5 @@
+var bcrypt = require('bcryptjs');
+
 module.exports = {
     identity: 'user',
     connection: 'default',
@@ -15,6 +17,19 @@ module.exports = {
             enum: ['student', 'teacher'],
             required: true,
             defaultsTo: 'student'
+        },
+                
+        validPassword: function (password) {
+            return bcrypt.compareSync(password, this.password);
         }
-    }
+    },
+    beforeCreate: function(values, next) {
+        bcrypt.hash(values.password, 10, function(err, hash) {
+            if (err) {
+                return next(err);
+            }
+            values.password = hash;
+            next();
+        });
+    }    
 }

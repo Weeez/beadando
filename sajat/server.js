@@ -78,7 +78,6 @@ passport.use('local', new LocalStrategy({
                 return done(err); 
             }
             if (!user || !user.validPassword(password)){
-                alert('hat nezze');
                 console.log("helytelen adatok");
                 return done(null, false, { message: 'Helytelen adatok.' });
             }else{
