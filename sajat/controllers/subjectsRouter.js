@@ -60,12 +60,13 @@ router.post('/subjects/new', function (req, res) {
         // adatok elmentése (ld. később) és a hibalista megjelenítése
         
         req.app.models.subject.create({
-            chbox: 'x',
+            chbox: "<input type='radio' name='focused'>",
             subject_name: req.body.subject_name,
             subject_code: req.body.subject_code,
             subject_size: req.body.subject_size,
             subject_location: req.body.subject_location,
-            subject_teacher: req.body.subject_teacher
+            subject_teacher: req.body.subject_teacher,
+            modification: "<button type='button' class='btn btn-warning'>Módositás</button><button type='button' class='btn btn-danger'>Törlés</button>"
         })
         .then(function (subject) {
             //siker

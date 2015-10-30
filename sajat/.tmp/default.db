@@ -2,26 +2,50 @@
   "data": {
     "subject": [
       {
-        "chbox": "x",
+        "chbox": "<input type='radio' name='focused'>",
         "subject_name": "Análizis 69",
-        "subject_code": "levoisaaa",
+        "subject_code": "anal69",
         "subject_size": "2",
         "subject_location": "Szereposztó Divány",
         "subject_teacher": "Sprint Elek",
-        "createdAt": "2015-10-29T12:10:37.776Z",
-        "updatedAt": "2015-10-29T12:10:37.776Z",
-        "id": 5
+        "modification": "<button type='button' class='btn btn-warning'>Módositás</button><button type='button' class='btn btn-danger'>Törlés</button>",
+        "createdAt": "2015-10-30T14:28:18.370Z",
+        "updatedAt": "2015-10-30T14:28:18.370Z",
+        "id": 1
+      }
+    ],
+    "user": [
+      {
+        "neptun": "QO728I",
+        "password": "almafa",
+        "role": "student",
+        "createdAt": "2015-10-30T14:27:52.175Z",
+        "updatedAt": "2015-10-30T14:27:52.175Z",
+        "id": 1
       },
       {
-        "chbox": "x",
-        "subject_name": "Test tárgy",
-        "subject_code": "tst01",
-        "subject_size": "10",
-        "subject_location": "Északi",
-        "subject_teacher": "Béla",
-        "createdAt": "2015-10-29T12:18:17.568Z",
-        "updatedAt": "2015-10-29T12:18:17.568Z",
-        "id": 10
+        "neptun": "TANAR",
+        "password": "titok",
+        "role": "teacher",
+        "createdAt": "2015-10-30T14:36:20.213Z",
+        "updatedAt": "2015-10-30T14:36:20.213Z",
+        "id": 2
+      },
+      {
+        "neptun": "q",
+        "password": "q",
+        "role": "student",
+        "createdAt": "2015-10-30T15:40:50.771Z",
+        "updatedAt": "2015-10-30T15:40:50.771Z",
+        "id": 15
+      },
+      {
+        "neptun": "w",
+        "password": "w",
+        "role": "student",
+        "createdAt": "2015-10-30T15:43:07.133Z",
+        "updatedAt": "2015-10-30T15:43:07.133Z",
+        "id": 16
       }
     ]
   },
@@ -45,6 +69,37 @@
       "subject_teacher": {
         "type": "string"
       },
+      "modification": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "neptun": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "student",
+          "teacher"
+        ],
+        "defaultsTo": "student"
+      },
       "id": {
         "type": "integer",
         "autoIncrement": true,
@@ -61,7 +116,10 @@
   },
   "counters": {
     "subject": {
-      "id": 11
+      "id": 1
+    },
+    "user": {
+      "id": 16
     }
   }
 }

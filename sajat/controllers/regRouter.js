@@ -1,8 +1,27 @@
 var express = require('express');
 var router = express.Router();
+var passport = require('passport');
+//var registers = [];
 
-var registers = [];
+router.get('/registration', function (req, res) {
+    req.flash('error', 'Sikertelen regisztráció!');
+    res.render('users/registration', {
+        errorMessages: req.flash('error')
+    });
+});
+router.post('/registration', passport.authenticate('local-registration', {
+    successRedirect:    '/',
+    failureRedirect:    '/registration',
+    failureFlash:       true,
+    badRequestMessage:  'Hiányzó adatok'
+}));
 
+
+
+
+
+
+/*
 
 router.get('/registration', function(req,res){
     var validationErrors = (req.flash('validationErrors') || [{}]).pop();
@@ -18,7 +37,7 @@ router.post('/registration', function(req,res){
     
     // adatok ellenőrzése
     req.checkBody('neptun', 'Hibás Neptunkód').notEmpty().withMessage('Kötelező megadni!');
-    req.checkBody('pwd', 'Hibás Jelszó').notEmpty().withMessage('Kötelező megadni!');    
+    req.checkBody('password', 'Hibás Jelszó').notEmpty().withMessage('Kötelező megadni!');    
     
     var validationErrors = req.validationErrors(true);
     console.log(validationErrors);
@@ -33,16 +52,30 @@ router.post('/registration', function(req,res){
         // adatok elmentése (ld. később) és a hibalista megjelenítése
         registers.push({
             neptun: req.body.neptun,
-            pwd: req.body.pwd
+            password: req.body.password
         });
 
-        req.flash('info', 'Sikeres regisztráció!');
-        res.render('index', {
-            messages: req.flash('info')
-        });        
+
+        req.app.models.user.create({
+            neptun: req.body.neptun,
+            password: req.body.password
+        })
+        .then(function (subject) {
+            //siker
+            req.flash('info', 'Sikeres regisztráció!');
+            res.render('index', {
+                messages: req.flash('info')
+            });
+        })
+        .catch(function (err) {
+            //hiba
+            console.log(err);
+        });
+        
+       
+
     }
 
 });
-
-
+*/
 module.exports = router;

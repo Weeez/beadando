@@ -21,16 +21,16 @@
     
     
     <div class="form-group
-        {{#if validationErrors.pwd}}
+        {{#if validationErrors.password}}
             has-error
         {{/if}}
     ">        
     
-      <label for="pwd">Adja meg a jelszavát:</label>
+      <label for="password">Adja meg a jelszavát:</label>
       <div class="col-lg-10">
-        <input class="form-control" id="pwd" name="pwd" type="password" value="{{data.pwd}}">
-        {{#if validationErrors.pwd}}
-            <span class="help-block">{{validationErrors.pwd.msg}}</span>
+        <input class="form-control" id="password" name="password" type="password" value="{{data.password}}">
+        {{#if validationErrors.password}}
+            <span class="help-block">{{validationErrors.password.msg}}</span>
         {{/if}}
       </div>
     </div>    

@@ -1,6 +1,23 @@
 var express = require('express');
 var router = express.Router();
 
+var passport = require('passport');
+
+
+router.get('/login', function (req, res) {
+    req.flash('error', 'Sikertelen bejelentkezés!');
+    res.render('users/login', {
+        errorMessages: req.flash('error')
+    });
+});
+router.post('/login', passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/login',
+    failureFlash: true,
+    badRequestMessage: 'Hiányzó adatok'
+}));
+
+/*
 router.get('/login', function(req,res){
     var validationErrors = (req.flash('validationErrors') || [{}]).pop();
     var data = (req.flash('data') || [{}]).pop();
@@ -28,11 +45,15 @@ router.post('/login', function(req,res){
         
     }else{
         // adatok elmentése (ld. később) és a hibalista megjelenítése
+        
+        
+        
+        
         req.flash('info', 'Sikeres bejelentkezés!');
         res.render('index', {
             messages: req.flash('info')
         });        
     }
 });
-
+*/
 module.exports = router;

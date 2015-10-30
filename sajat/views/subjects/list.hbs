@@ -12,23 +12,25 @@
   <table class="table">
     <thead>
       <tr>
-        <th>chbox</th>
+        <th></th>
         <th>Tárgy neve</th>
         <th>Tárgy kódja</th>
         <th>helyek száma</th>
         <th>helyszín</th>
         <th>Oktató</th>
+        <th>Módositás</th>
       </tr>
     </thead>
     <tbody>
         {{#each subjects}}
         <tr>
-            <td>{{chbox}}</td>
+            <td>{{{chbox}}}</td>
             <td>{{subject_name}}</td>
             <td>{{subject_code}}</td>
             <td>{{subject_size}}</td>
             <td>{{subject_location}}</td>
             <td>{{subject_teacher}}</td>
+            <td>{{{modification}}}</td>
         </tr>
         {{/each}}
     </tbody>
