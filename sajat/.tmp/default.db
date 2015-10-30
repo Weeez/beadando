@@ -3,25 +3,33 @@
     "subject": [
       {
         "chbox": "<input type='radio' name='focused'>",
-        "subject_name": "asd",
-        "subject_code": "asd",
-        "subject_size": "12",
-        "subject_location": "asd",
-        "subject_teacher": "asd",
+        "subject_name": "Análízis 69",
+        "subject_code": "Anal69",
+        "subject_size": "2",
+        "subject_location": "Szereposztó dívány",
+        "subject_teacher": "Sprint Elek",
         "modification": "<button type='button' class='btn btn-warning'>Módositás</button><button type='button' class='btn btn-danger'>Törlés</button>",
-        "createdAt": "2015-10-30T21:03:09.799Z",
-        "updatedAt": "2015-10-30T21:03:09.799Z",
+        "createdAt": "2015-10-30T22:44:44.155Z",
+        "updatedAt": "2015-10-30T22:44:44.155Z",
         "id": 1
       }
     ],
     "user": [
       {
-        "neptun": "QO728I",
-        "password": "$2a$10$TeT/43GDx4P95eHMee0g8uSwXKGrA5wQo1XZO6MXJ5fgNtD9s8Ucu",
-        "role": "student",
-        "createdAt": "2015-10-30T21:02:51.613Z",
-        "updatedAt": "2015-10-30T21:02:51.613Z",
+        "neptun": "TANAR",
+        "password": "$2a$10$YUZ9zPTQnvtSdb2m6PkVnOhktwGfqHI/Wpu7bDIvng9hhG6aHkpm2",
+        "role": "teacher",
+        "createdAt": "2015-10-30T21:59:30.419Z",
+        "updatedAt": "2015-10-30T21:59:30.419Z",
         "id": 1
+      },
+      {
+        "neptun": "QO728I",
+        "password": "$2a$10$PxdXsLy1tOQ27XyOZiBVn.0uTrqYPLwELOWnLXpbKrI7YKBPwEBD6",
+        "role": "student",
+        "createdAt": "2015-10-30T22:01:46.771Z",
+        "updatedAt": "2015-10-30T22:01:46.771Z",
+        "id": 2
       }
     ]
   },
@@ -95,7 +103,7 @@
       "id": 1
     },
     "user": {
-      "id": 1
+      "id": 3
     }
   }
 }

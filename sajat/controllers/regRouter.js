@@ -10,7 +10,7 @@ router.get('/registration', function (req, res) {
     });
 });
 router.post('/registration', passport.authenticate('local-registration', {
-    successRedirect:    '/',
+    successRedirect:    '/subjects/list',
     failureRedirect:    '/registration',
     failureFlash:       true,
     badRequestMessage:  'Hiányzó adatok'

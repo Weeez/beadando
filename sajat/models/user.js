@@ -21,7 +21,10 @@ module.exports = {
                 
         validPassword: function (password) {
             return bcrypt.compareSync(password, this.password);
-        }
+        },
+        
+        isTeacher: false
+ 
     },
     beforeCreate: function(values, next) {
         bcrypt.hash(values.password, 10, function(err, hash) {
