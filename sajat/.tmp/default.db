@@ -12,6 +12,18 @@
         "createdAt": "2015-10-30T22:44:44.155Z",
         "updatedAt": "2015-10-30T22:44:44.155Z",
         "id": 1
+      },
+      {
+        "chbox": "<input type='radio' name='focused'>",
+        "subject_name": "asd",
+        "subject_code": "asd",
+        "subject_size": "1",
+        "subject_location": "asdasd",
+        "subject_teacher": "qwe",
+        "modification": "<button type='button' class='btn btn-warning'>Módositás</button><button type='button' class='btn btn-danger'>Törlés</button>",
+        "createdAt": "2015-10-30T23:09:54.742Z",
+        "updatedAt": "2015-10-30T23:09:54.742Z",
+        "id": 2
       }
     ],
     "user": [
@@ -100,7 +112,7 @@
   },
   "counters": {
     "subject": {
-      "id": 1
+      "id": 2
     },
     "user": {
       "id": 3
