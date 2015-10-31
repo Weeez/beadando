@@ -36,6 +36,18 @@
         "createdAt": "2015-10-31T12:05:55.326Z",
         "updatedAt": "2015-10-31T12:05:55.326Z",
         "id": 5
+      },
+      {
+        "chbox": "<input type='radio' name='focused'>",
+        "subject_name": "w",
+        "subject_code": "w",
+        "subject_size": "3",
+        "subject_location": "w",
+        "subject_teacher": "w",
+        "modification": "<form action=req.app.models.subject.delete(this)><input type='submit' class='btn btn-warning' value='Módosítás'></form>",
+        "createdAt": "2015-10-31T12:17:28.488Z",
+        "updatedAt": "2015-10-31T12:17:28.488Z",
+        "id": 6
       }
     ],
     "user": [
@@ -124,7 +136,7 @@
   },
   "counters": {
     "subject": {
-      "id": 5
+      "id": 6
     },
     "user": {
       "id": 3

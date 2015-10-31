@@ -88,7 +88,7 @@ router.post('/subjects/new', function (req, res) {
             subject_location: req.body.subject_location,
             subject_teacher: req.body.subject_teacher,
             //modification: "<button type='button' class='btn btn-warning'>Módositás</button><button type='button' class='btn btn-danger'  >Törlés</button>"
-            modification: "<form action='/subjects/delete'><input type='submit' class='btn btn-warning' value='Módosítás'></form>"
+            modification: "<form action='req.app.models.subject.delete(this)'><input type='submit' class='btn btn-warning' value='Módosítás'></form>"
         })
         .then(function (subject) {
             //siker
