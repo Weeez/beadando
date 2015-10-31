@@ -8,9 +8,9 @@
         "subject_size": "2",
         "subject_location": "Szereposztó dívány",
         "subject_teacher": "Sprint Elek",
-        "createdAt": "2015-10-31T14:03:05.949Z",
-        "updatedAt": "2015-10-31T14:03:05.949Z",
-        "id": 2
+        "createdAt": "2015-10-31T14:21:07.130Z",
+        "updatedAt": "2015-10-31T14:21:07.130Z",
+        "id": 4
       }
     ],
     "user": [
@@ -96,7 +96,7 @@
   },
   "counters": {
     "subject": {
-      "id": 3
+      "id": 4
     },
     "user": {
       "id": 3

@@ -158,6 +158,7 @@ app.post('/subjects/new',ensureAuthenticated, andRestrictTo('teacher'),subjectsR
 app.get('/subjects/list',ensureAuthenticated,subjectsRouter);
 //app.post('/subjects/list',subjectsRouter);
 app.get('/subjects/delete/:id',ensureAuthenticated,subjectsRouter);
+app.get('/subjects/update/:id',ensureAuthenticated,subjectsRouter);
 app.get('/about',aboutRouter);
 app.get('/', indexRouter);
 app.get('/logout', logoutRouter);

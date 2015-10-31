@@ -51,6 +51,13 @@ router.get('/subjects/delete/:id', function (req, res) {
         });*/
 });
 
+router.get('/subjects/update/:id', function(req,res){
+    var id = req.params.id;
+    
+    console.log(req.app.models.subject);
+    
+});
+
 router.get('/subjects/new', function(req,res){
     var validationErrors = (req.flash('validationErrors') || [{}]).pop();
     var data = (req.flash('data') || [{}]).pop();
