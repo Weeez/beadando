@@ -36,7 +36,7 @@ router.get('/subjects/list', function(req,res){
 router.get('/subjects/delete', function (req, res) {
     
     //req.app.models.subject.delete();
-    console.log(req.app.models.subject.find());
+    console.log(req.app.models.subject.find().detach());
     /*req.app.models.subject.delete().then(function () {
             //siker
             res.redirect('/subjects/list');
