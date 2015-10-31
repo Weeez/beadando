@@ -157,6 +157,7 @@ app.get('/subjects/new',ensureAuthenticated, andRestrictTo('teacher'),subjectsRo
 app.post('/subjects/new',ensureAuthenticated, andRestrictTo('teacher'),subjectsRouter);
 app.get('/subjects/list',ensureAuthenticated,subjectsRouter);
 //app.post('/subjects/list',subjectsRouter);
+app.get('/subjects/delete',subjectsRouter);
 app.get('/about',aboutRouter);
 app.get('/', indexRouter);
 app.get('/logout', logoutRouter);
