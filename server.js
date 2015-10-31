@@ -179,8 +179,8 @@ orm.loadCollection(Waterline.Collection.extend(userCollection));
 orm.initialize(config, function(err, models) {
     if(err) {console.log(err)};
     
-    app.models = models.collections;
-    //app.connections = models.connections;
+    app.models = models.collections; //ezzel itt gáz van
+    app.connections = models.connections; //ezzel is
     
     // Start Server
     var port = process.env.PORT || 3000;
