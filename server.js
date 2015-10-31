@@ -177,7 +177,7 @@ orm.loadCollection(Waterline.Collection.extend(userCollection));
 
 // start ORM 
 orm.initialize(config, function(err, models) {
-    if(err) throw err;
+    if(err) {console.log(err)};
     
     app.models = models.collections;
     app.connections = models.connections;
