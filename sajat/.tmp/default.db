@@ -48,6 +48,30 @@
         "createdAt": "2015-10-31T12:17:28.488Z",
         "updatedAt": "2015-10-31T12:17:28.488Z",
         "id": 6
+      },
+      {
+        "chbox": "<input type='radio' name='focused'>",
+        "subject_name": "r",
+        "subject_code": "r",
+        "subject_size": "2",
+        "subject_location": "r",
+        "subject_teacher": "r",
+        "modification": "<form action='/subjects/delete'><input type='submit' class='btn btn-warning' value='Módosítás'></form>",
+        "createdAt": "2015-10-31T12:34:29.806Z",
+        "updatedAt": "2015-10-31T12:34:29.806Z",
+        "id": 7
+      },
+      {
+        "chbox": "<input type='radio' name='focused'>",
+        "subject_name": "h",
+        "subject_code": "h",
+        "subject_size": "1",
+        "subject_location": "h",
+        "subject_teacher": "h",
+        "modification": "<form action='/subjects/delete'><input type='submit' class='btn btn-warning' value='Módosítás'></form>",
+        "createdAt": "2015-10-31T12:35:53.863Z",
+        "updatedAt": "2015-10-31T12:35:53.863Z",
+        "id": 8
       }
     ],
     "user": [
@@ -136,7 +160,7 @@
   },
   "counters": {
     "subject": {
-      "id": 6
+      "id": 8
     },
     "user": {
       "id": 3

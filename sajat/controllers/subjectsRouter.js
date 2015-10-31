@@ -33,11 +33,19 @@ router.get('/subjects/list', function(req,res){
     });
 });
 
-router.post('/subjects/delete', function (req, res) {
+router.get('/subjects/delete', function (req, res) {
     
     //req.app.models.subject.delete();
-    req.app.models.subject.delete;
-    
+    console.log(req.app.models.subject.find());
+    /*req.app.models.subject.delete().then(function () {
+            //siker
+            res.redirect('/subjects/list');
+        })
+        .catch(function (err) {
+            //hiba
+            console.log(err);
+        });;
+    */
 });
 
 router.get('/subjects/new', function(req,res){
