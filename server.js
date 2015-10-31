@@ -180,7 +180,7 @@ orm.initialize(config, function(err, models) {
     if(err) {console.log(err)};
     
     //app.models = models.collections;
-    app.connections = models.connections;
+    //app.connections = models.connections;
     
     // Start Server
     var port = process.env.PORT || 3000;
