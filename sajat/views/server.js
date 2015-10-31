@@ -33,6 +33,8 @@ passport.deserializeUser(function(obj, done) {
 });
 
 
+
+
 // Local Strategy for sign-up
 passport.use('local-registration', new LocalStrategy({
         usernameField: 'neptun',
