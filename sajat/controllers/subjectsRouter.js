@@ -33,10 +33,11 @@ router.get('/subjects/list', function(req,res){
     });
 });
 
-router.get('/subjects/delete', function (req, res) {
+router.get('/subjects/delete/:id', function (req, res) {
     
+    console.log(req.params.id);
     //req.app.models.subject.delete();
-    console.log(req.app.models.subject.find().detach());
+    //console.log(req.app.models.subject.find().detach());
     /*req.app.models.subject.delete().then(function () {
             //siker
             res.redirect('/subjects/list');
@@ -97,7 +98,7 @@ router.post('/subjects/new', function (req, res) {
             subject_location: req.body.subject_location,
             subject_teacher: req.body.subject_teacher,
             //modification: "<button type='button' class='btn btn-warning'>Módositás</button><button type='button' class='btn btn-danger'  >Törlés</button>"
-            modification: "<form action='/subjects/delete'><input type='submit' class='btn btn-warning' value='Módosítás'></form>"
+            modification: "<form action='/subjects/delete/"+ req.app.models.subject +"'><input type='submit' class='btn btn-warning' value='Módosítás'></form>"
         })
         .then(function (subject) {
             //siker
