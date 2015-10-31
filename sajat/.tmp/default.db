@@ -8,46 +8,9 @@
         "subject_size": "2",
         "subject_location": "Szereposztó dívány",
         "subject_teacher": "Sprint Elek",
-        "modification": "<button type='button' class='btn btn-warning'>Módositás</button><button type='button' class='btn btn-danger' onclick='test(){console.log('asd')>Törlés</button>",
-        "createdAt": "2015-10-31T08:42:51.363Z",
-        "updatedAt": "2015-10-31T08:42:51.363Z",
-        "id": 1
-      },
-      {
-        "chbox": "<input type='radio' name='focused'>",
-        "subject_name": "wqe",
-        "subject_code": "qwe",
-        "subject_size": "2",
-        "subject_location": "we",
-        "subject_teacher": "qwe",
-        "modification": "<form action='/subjects/delete/undefined'><input type='submit' class='btn btn-warning' value='Módosítás'></form>",
-        "createdAt": "2015-10-31T13:21:25.699Z",
-        "updatedAt": "2015-10-31T13:21:25.699Z",
-        "id": 7
-      },
-      {
-        "chbox": "<input type='radio' name='focused'>",
-        "subject_name": "q",
-        "subject_code": "q",
-        "subject_size": "2",
-        "subject_location": "q",
-        "subject_teacher": "q",
-        "modification": "<form action='/subjects/delete/[object Object]'><input type='submit' class='btn btn-warning' value='Módosítás'></form>",
-        "createdAt": "2015-10-31T13:23:07.864Z",
-        "updatedAt": "2015-10-31T13:23:07.864Z",
-        "id": 8
-      },
-      {
-        "chbox": "<input type='radio' name='focused'>",
-        "subject_name": "ghj",
-        "subject_code": "gj",
-        "subject_size": "34",
-        "subject_location": "jhk",
-        "subject_teacher": "hjk",
-        "modification": "<form action='/subjects/delete/[object Object]'><input type='submit' class='btn btn-warning' value='Módosítás'></form>",
-        "createdAt": "2015-10-31T13:31:57.327Z",
-        "updatedAt": "2015-10-31T13:31:57.327Z",
-        "id": 9
+        "createdAt": "2015-10-31T14:03:05.949Z",
+        "updatedAt": "2015-10-31T14:03:05.949Z",
+        "id": 2
       }
     ],
     "user": [
@@ -87,9 +50,6 @@
         "type": "string"
       },
       "subject_teacher": {
-        "type": "string"
-      },
-      "modification": {
         "type": "string"
       },
       "id": {
@@ -136,7 +96,7 @@
   },
   "counters": {
     "subject": {
-      "id": 9
+      "id": 3
     },
     "user": {
       "id": 3

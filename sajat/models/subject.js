@@ -25,10 +25,6 @@ module.exports = {
         subject_teacher: {
             type: 'string',
             required: true
-        },
-        modification: {
-            type: 'string',
-            required: true
         }
     }
 }

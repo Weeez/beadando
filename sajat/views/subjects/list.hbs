@@ -33,7 +33,12 @@
             <td>{{subject_teacher}}</td>
             <td>
             {{#if ../user.isTeacher}}
-                {{{modification}}}
+              
+              <span style="white-space: nowrap;">
+                <form style="display: inline" action='/#'><input type='submit' class='btn btn-warning' value='Módosítás'></form>
+                <form style="display: inline" action='/subjects/delete/{{id}}'><input type='submit' class='btn btn-danger' value='Törlés'></form>
+              </span>  
+              
             {{else}}
                 -
             {{/if}}
