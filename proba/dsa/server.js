@@ -133,7 +133,7 @@ orm.loadCollection(Waterline.Collection.extend(userCollection));
 
 // ORM indítása
 orm.initialize(waterlineConfig, function(err, models) {
-    if(err) throw err;
+    if(err) {console.log(err)};
     
     app.models = models.collections;
     app.connections = models.connections;
