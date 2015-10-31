@@ -34,6 +34,7 @@ passport.deserializeUser(function(obj, done) {
 
 
 
+
 // Local Strategy for sign-up
 passport.use('local-registration', new LocalStrategy({
         usernameField: 'neptun',
@@ -64,7 +65,7 @@ passport.use('local-registration', new LocalStrategy({
 
 
 
-// Stratégia
+// Strategy
 passport.use('local', new LocalStrategy({
         usernameField: 'neptun',
         passwordField: 'password',
@@ -93,22 +94,9 @@ passport.use('local', new LocalStrategy({
 
 
 
-
-
-
-
-
-//var http = require('http');
-
-
-
 //hbs
 app.set('views', './views');
 app.set('view engine', 'hbs');
-
-
-
-
 
 
 
@@ -187,7 +175,7 @@ var orm = new Waterline();
 orm.loadCollection(Waterline.Collection.extend(subjectCollection));
 orm.loadCollection(Waterline.Collection.extend(userCollection));
 
-// ORM indítása
+// start ORM 
 orm.initialize(config, function(err, models) {
     if(err) throw err;
     

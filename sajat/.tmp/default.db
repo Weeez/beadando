@@ -8,22 +8,34 @@
         "subject_size": "2",
         "subject_location": "Szereposztó dívány",
         "subject_teacher": "Sprint Elek",
-        "modification": "<button type='button' class='btn btn-warning'>Módositás</button><button type='button' class='btn btn-danger'>Törlés</button>",
-        "createdAt": "2015-10-30T22:44:44.155Z",
-        "updatedAt": "2015-10-30T22:44:44.155Z",
-        "id": 1
+        "modification": "<button type='button' class='btn btn-warning'>Módositás</button><button type='button' class='btn btn-danger' onclick='test(){console.log('asd')>Törlés</button>",
+        "createdAt": "2015-10-31T08:42:51.363Z",
+        "updatedAt": "2015-10-31T08:42:51.363Z",
+        "id": 3
       },
       {
         "chbox": "<input type='radio' name='focused'>",
         "subject_name": "asd",
         "subject_code": "asd",
-        "subject_size": "1",
-        "subject_location": "asdasd",
-        "subject_teacher": "qwe",
-        "modification": "<button type='button' class='btn btn-warning'>Módositás</button><button type='button' class='btn btn-danger'>Törlés</button>",
-        "createdAt": "2015-10-30T23:09:54.742Z",
-        "updatedAt": "2015-10-30T23:09:54.742Z",
-        "id": 2
+        "subject_size": "22",
+        "subject_location": "asdd",
+        "subject_teacher": "ssda",
+        "modification": "<button type='button' class='btn btn-warning'>Módositás</button><button type='button' class='btn btn-danger' onclick='test(){console.log('asd')>Törlés</button>",
+        "createdAt": "2015-10-31T08:45:13.125Z",
+        "updatedAt": "2015-10-31T08:45:13.125Z",
+        "id": 4
+      },
+      {
+        "chbox": "<input type='radio' name='focused'>",
+        "subject_name": "eee",
+        "subject_code": "eee",
+        "subject_size": "2",
+        "subject_location": "eee",
+        "subject_teacher": "eee",
+        "modification": "<form action='/subjects/delete'><input type='submit' class='btn btn-warning' value='Módosítás'></form>",
+        "createdAt": "2015-10-31T12:05:55.326Z",
+        "updatedAt": "2015-10-31T12:05:55.326Z",
+        "id": 5
       }
     ],
     "user": [
@@ -112,7 +124,7 @@
   },
   "counters": {
     "subject": {
-      "id": 2
+      "id": 5
     },
     "user": {
       "id": 3

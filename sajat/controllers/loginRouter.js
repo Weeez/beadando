@@ -15,9 +15,7 @@ router.post('/login', passport.authenticate('local', {
     failureRedirect: '/login',
     failureFlash: true,
     badRequestMessage: 'Hiányzó adatok'
-}),function(req,res){
-    console.log("dafuq");
-});
+}));
 
 /*
 router.get('/login', function(req,res){
