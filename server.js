@@ -148,7 +148,7 @@ app.use(setLocalsForLayout());
 
 app.use('/registration', regRouter);
 app.use('/login', loginRouter);
-app.use('/subjects',ensureAuthenticated, andRestrictTo('teacher'),subjectsRouter);
+app.use('/subjects',ensureAuthenticated,subjectsRouter);
 app.use('/about',aboutRouter);
 app.use('/', indexRouter);
 app.use('/logout', logoutRouter);
