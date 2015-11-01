@@ -4,13 +4,13 @@ var router = express.Router();
 var passport = require('passport');
 
 
-router.get('/login', function (req, res) {
+router.get('/', function (req, res) {
     req.flash('error', 'Sikertelen bejelentkezés!');
     res.render('users/login', {
         errorMessages: req.flash('error')
     });
 });
-router.post('/login', passport.authenticate('local', {
+router.post('/', passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/login',
     failureFlash: true,

@@ -5,7 +5,7 @@ var router = express.Router();
 var hasNewSubject = false;
 
     var test= function(){console.log("teszteeeeeeeeeeeeeeee");}
-router.get('/subjects/list', function(req,res){
+router.get('/list', function(req,res){
 
     var userHasRights = req.user.role === 'teacher';
     
@@ -33,7 +33,7 @@ router.get('/subjects/list', function(req,res){
     });
 });
 
-router.get('/subjects/delete/:id', function (req, res) {
+router.get('/delete/:id', function (req, res) {
     
     var id = req.params.id;
     req.app.models.subject.destroy({id: id}).then(function(){
@@ -51,14 +51,60 @@ router.get('/subjects/delete/:id', function (req, res) {
         });*/
 });
 
-router.get('/subjects/update/:id', function(req,res){
+router.get('/update/:id', function(req,res){
     var id = req.params.id;
-    
-    console.log(req.app.models.subject);
+    var validationErrors = (req.flash('validationErrors') || [{}]).pop();
+    var data = (req.flash('data') || [{}]).pop();
+	req.app.models.subject.findOne({id: id}).then(function (subject){
+		res.render('subjects/update',{
+				subject: subject,
+				validationErrors: validationErrors,
+				data: data
+		});
+
+	});
     
 });
 
-router.get('/subjects/new', function(req,res){
+
+router.post('/update/:id', function (req, res) {
+        var id = req.params.id;
+        
+        req.checkBody('subject_name', 'Hibás Tárgynév').notEmpty().withMessage('Kötelező megadni!');
+        req.checkBody('subject_code', 'Hibás Tárgy kódnév').notEmpty().withMessage('Kötelező megadni!');
+        req.checkBody('subject_size', 'Hibás helyek száma').notEmpty().withMessage('Kötelező megadni!');
+        req.checkBody('subject_size','A megadott érték nem szám').isInt();
+        req.checkBody('subject_location', 'Hibás helyszínnév').notEmpty().withMessage('Kötelező megadni!');
+        req.checkBody('subject_teacher', 'Hibás tanárnév').notEmpty().withMessage('Kötelező megadni!');
+        
+        var validationErrors = req.validationErrors(true);
+        console.log(validationErrors);   
+        
+        if (validationErrors) {
+            // űrlap megjelenítése a hibákkal és a felküldött adatokkal
+            req.flash('validationErrors', validationErrors);
+            req.flash('data', req.body);
+            res.redirect('/subjects/update/'+id);   
+        }
+        else {
+            // adatok elmentése (ld. később) és a hibalista megjelenítése
+                  
+    		
+            req.app.models.subject.update({id: req.params.id}, {
+                subject_name: req.body.subject_name,
+                subject_code: req.body.subject_code,
+                subject_size: req.body.subject_size,
+                subject_location: req.body.subject_location,
+                subject_teacher: req.body.subject_teacher
+            })
+                .exec(function (err,subject) {
+                    if(err){console.log(err);}
+                    res.redirect('/subjects/list');
+                });
+        }
+});
+
+router.get('/new', function(req,res){
     var validationErrors = (req.flash('validationErrors') || [{}]).pop();
     var data = (req.flash('data') || [{}]).pop();
     
@@ -68,7 +114,7 @@ router.get('/subjects/new', function(req,res){
         }); 
 });
 
-router.post('/subjects/new', function (req, res) {
+router.post('/new', function (req, res) {
     
     hasNewSubject = true;
     

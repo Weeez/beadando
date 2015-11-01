@@ -1,39 +1,23 @@
-{
-  "name": "sajat",
-  "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Weeez/beadando.git"
-  },
-  "author": "Balázs András",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Weeez/beadando/issues"
-  },
-  "homepage": "https://github.com/Weeez/beadando#readme",
-  "dependencies": {
-    "body-parser": "^1.14.1",
-    "connect-flash": "^0.1.1",
-    "express": "^4.13.3",
-    "express-session": "^1.12.0",
-    "express-validator": "^2.17.1",
-    "hbs": "^3.1.1",
-    "passport": "^0.3.0",
-    "passport-local": "^1.0.0",
-    "sails-disk": "^0.10.8",
-    "sails-memory": "^0.10.5",
-    "sails-postgresql": "^0.10.16",
-    "waterline": "^0.10.26"
-  },
-  "devDependencies": {},
-<<<<<<< HEAD
-  "description": "test"
-=======
-  "description": ""
->>>>>>> 41ca3ae502e8de6906acf1cfee3b8f809e41956f
-}
+először is csináltam egy get-et, amivel átiránytom a foods/update oldalra, itt a getben lekerem a findOne függvénnyel id szerint az adott sorban lévő objektumot így a webes részen a valuenak betudom állítani az adott objektum értékeit
+majd csináltam egy post-ot, ahol updatelem a paraméterben lévő id-val rendelkező objektumot
+
+router.get('/update/:id', function (req, res) {
+    var id = req.params.id;
+	req.app.models.food.findOne({id: id}).then(function (food){
+		res.render('foods/update',{
+				food: food,
+		});
+	});
+});
+
+router.post('/update/:id', function (req, res) {
+		
+        req.app.models.food.update({id: req.params.id}, {
+            name: req.body.name,
+            price: req.body.price,
+            description: req.body.description
+        })
+            .exec(function (err,food) {
+                res.redirect('/foods/list');
+            });
+});

@@ -146,20 +146,12 @@ function andRestrictTo(role) {
 
 app.use(setLocalsForLayout());
 
-app.get('/registration', regRouter);
-app.post('/registration', regRouter);
-//app.use('/registration', regRouter);
-app.get('/login', loginRouter);
-app.post('/login', loginRouter);
-app.get('/subjects/new',ensureAuthenticated, andRestrictTo('teacher'),subjectsRouter);
-app.post('/subjects/new',ensureAuthenticated, andRestrictTo('teacher'),subjectsRouter);
-app.get('/subjects/list',ensureAuthenticated,subjectsRouter);
-//app.post('/subjects/list',subjectsRouter);
-app.get('/subjects/delete/:id',ensureAuthenticated,subjectsRouter);
-app.get('/subjects/update/:id',ensureAuthenticated,subjectsRouter);
-app.get('/about',aboutRouter);
-app.get('/', indexRouter);
-app.get('/logout', logoutRouter);
+app.use('/registration', regRouter);
+app.use('/login', loginRouter);
+app.use('/subjects',ensureAuthenticated, andRestrictTo('teacher'),subjectsRouter);
+app.use('/about',aboutRouter);
+app.use('/', indexRouter);
+app.use('/logout', logoutRouter);
 
 
 

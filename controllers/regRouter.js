@@ -3,13 +3,13 @@ var router = express.Router();
 var passport = require('passport');
 //var registers = [];
 
-router.get('/registration', function (req, res) {
+router.get('/', function (req, res) {
     req.flash('error', 'Sikertelen regisztráció!');
     res.render('users/registration', {
         errorMessages: req.flash('error')
     });
 });
-router.post('/registration', passport.authenticate('local-registration', {
+router.post('/', passport.authenticate('local-registration', {
     successRedirect:    '/subjects/list',
     failureRedirect:    '/registration',
     failureFlash:       true,

@@ -11,6 +11,31 @@
         "createdAt": "2015-10-31T14:21:07.130Z",
         "updatedAt": "2015-10-31T14:21:07.130Z",
         "id": 4
+      },
+      {
+        "chbox": "<input type='radio' name='focused'>",
+        "subject_name": "dfddddddd",
+        "subject_code": "adsdasasddddddddddddddddddddd",
+        "subject_size": "200",
+        "subject_location": "ddddddddddddd",
+        "subject_teacher": "ddddddddddddd",
+        "createdAt": "2015-11-01T15:26:49.840Z",
+        "updatedAt": "2015-11-01T15:39:27.774Z",
+        "id": 7,
+        "name": null,
+        "price": null,
+        "description": null
+      },
+      {
+        "chbox": "<input type='radio' name='focused'>",
+        "subject_name": "asd",
+        "subject_code": "asd",
+        "subject_size": "23333",
+        "subject_location": "asd",
+        "subject_teacher": "asd",
+        "createdAt": "2015-11-01T16:33:13.070Z",
+        "updatedAt": "2015-11-01T17:08:02.667Z",
+        "id": 8
       }
     ],
     "user": [
@@ -29,6 +54,14 @@
         "createdAt": "2015-10-30T22:01:46.771Z",
         "updatedAt": "2015-10-30T22:01:46.771Z",
         "id": 2
+      },
+      {
+        "neptun": "w",
+        "password": "$2a$10$VpQGcsaBJu73h2ZQrjAtuOx906ndlkCrGKumtLHtK6XAqCxsJ/R9G",
+        "role": "student",
+        "createdAt": "2015-11-01T16:21:45.811Z",
+        "updatedAt": "2015-11-01T16:21:45.811Z",
+        "id": 4
       }
     ]
   },
@@ -96,10 +129,10 @@
   },
   "counters": {
     "subject": {
-      "id": 6
+      "id": 8
     },
     "user": {
-      "id": 3
+      "id": 4
     }
   }
 }
