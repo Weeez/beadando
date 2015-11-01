@@ -39,16 +39,7 @@ router.get('/delete/:id', function (req, res) {
     req.app.models.subject.destroy({id: id}).then(function(){
                 res.redirect('/subjects/list');
             });
-        /*.then(function (deletedFoods) {
-            res.format({
-                'text/html': function(){
-                    res.redirect('/foods/list');
-                },
-                'application/json': function () {
-                    res.json({ success: true });
-                }
-            });
-        });*/
+
 });
 
 router.get('/update/:id', function(req,res){
