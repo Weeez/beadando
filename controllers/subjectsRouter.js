@@ -99,10 +99,14 @@ router.get('/new', function(req,res){
     var validationErrors = (req.flash('validationErrors') || [{}]).pop();
     var data = (req.flash('data') || [{}]).pop();
     
+    if(req.user.isTeacher){
         res.render('subjects/new', {
             validationErrors: validationErrors,
             data: data
         }); 
+    }else{
+        res.redirect('/');
+    }
 });
 
 router.post('/new', function (req, res) {
