@@ -18,7 +18,9 @@
         <th>helyek száma</th>
         <th>helyszín</th>
         <th>Oktató</th>
+        {{#if user.isTeacher}}
         <th>Módositás</th>
+        {{/if}}
       </tr>
     </thead>
     <tbody>
@@ -33,11 +35,8 @@
             <td>{{subject_teacher}}</td>
             <td>
             {{#if ../user.isTeacher}}
-            
               <form style="display: inline" action='/subjects/update/{{id}}'><input type='submit' class='btn btn-warning' value='Módosítás'></form>
               <form style="display: inline" action='/subjects/delete/{{id}}'><input type='submit' class='btn btn-danger' value='Törlés'></form>
-            {{else}}
-                -
             {{/if}}
             </td>
         </tr>
