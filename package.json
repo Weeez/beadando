@@ -18,9 +18,12 @@
     "sails-postgresql": "^0.10.16",
     "bcryptjs": "^2.3.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "zombie": "^4.2.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test",
     "start": "node server.js"
   },
   "repository": {
