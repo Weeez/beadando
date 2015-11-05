@@ -35,7 +35,6 @@ Balázs András - QO728I - xeropax@gmail.com
     * delete: Egy létező tantárgy törlésének lehetősége, html gombbal.
 4. Használatieset-modell:
 
-#### Inline
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/dokum.jpg "")
 
 ## Tervezés
