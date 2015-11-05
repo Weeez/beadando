@@ -29,10 +29,14 @@ Balázs András - QO728I - xeropax@gmail.com
         * neptun: a felhasználó neptun kódja, szöveges formátumban tárolva (String),
         * password: a felhasználó jelszava, szöveges formátumban tárolva (String),
         * role: a felhasználó szerepköre, enumként tárolva.
-    * list: A tantárgyak listája. Kódbeli reprezentációja a html subject-ek listázása.
-    * new: Új tantárgy felvételének lehetősége, űrlap oldal segítségével.
-    * update: Egy létező tantárgy módosításának lehetősége, űrlap oldal segítségével
-    * delete: Egy létező tantárgy törlésének lehetősége.
+    * list: A tantárgyak listája. Kódbeli reprezentációja a subject-ek listázása, html oldalon.
+    * new: Új tantárgy felvételének lehetősége, űrlap oldal segítségével, html gombbal.
+    * update: Egy létező tantárgy módosításának lehetősége, űrlap oldal segítségével, html gombbal.
+    * delete: Egy létező tantárgy törlésének lehetősége, html gombbal.
+4. Használatieset-modell:
+
+#### Inline
+![Ábra](https://beadando-weeez.c9.io/pics/dokum.jpg "")
 
 ## Tervezés
 ## Implementáció
