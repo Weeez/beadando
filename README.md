@@ -1,4 +1,4 @@
-# Dokumentáció </br>Tantárgy felvétel (tanári oldalról)
+# :Dokumentáció: </br>Tantárgy felvétel (tanári oldalról)
 
 ------
 
