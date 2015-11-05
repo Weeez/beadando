@@ -36,7 +36,7 @@ Balázs András - QO728I - xeropax@gmail.com
 4. Használatieset-modell:
 
 #### Inline
-![Ábra](https://photos-5.dropbox.com/t/2/AAAEBjgPPAYqWMAcAP54ApThzBNBVq-RtupgDvpNIe4S5g/12/79391610/jpeg/32x32/1/_/1/2/dokum.jpg/ENGK1j0YonQgBygH/h-B-N_ap3oJbPPa6aeh4z_Ru5yGZg-5lTNAhKXl_6IU?size=1024x768&size_mode=2 "")
+![Ábra](blob:https%3A//drive.google.com/8e72f542-9b88-48bc-a172-b12f58cfa9ad "")
 
 ## Tervezés
 ## Implementáció
