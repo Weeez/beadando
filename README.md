@@ -36,6 +36,7 @@ Balázs András - QO728I - xeropax@gmail.com
 4. Használatieset-modell:
 
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/dokum.jpg "")
+![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/kep.jpg "")
 
 ## Tervezés
 ## Implementáció
