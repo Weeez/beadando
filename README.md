@@ -17,6 +17,22 @@ Balázs András - QO728I - xeropax@gmail.com
     * Csak regisztrált felhasználónak van lehetősége bejelentkezni.
     * A bejelentkezésig nem érhetőek el a szerepkörökhöz kötött funkciók, ezen végpontok hívásakor az oldal visszanavigál a bejelentkezés oldalra.
     * Ha valaki 'hallgató' jogosultsággal hívja meg a 'tanár' jogosultságú végpont oldal(aka)t, akkor visszanavigálja a kezdőoldalra.
+3. Szakterületi fogalomjegyzék:
+    * subject: A Tantárgy adatait tároló objektum. Tulajondságai: 
+        * chbox: html radio gomb, szöveges formátumban tárolva (String),
+        * subject_name: a tárgy neve, szöveges formátumban tárolva (String),
+        * subject_code: a tárgy kódja, szöveges formátumban tárolva (String),
+        * subject_size: a tárgyat hallgatható diákok száma, szöveges formátumban tárolva (String),
+        * subject_location: a tárgy tanterme (helyszine), szöveges formátumban tárolva (String),
+        * subject_teacher: a tárgyat oktató professzor neve, szöveges formátumban tárolva (String)
+    * user: A regisztrált felhasználókat leíró objektum. Tulajdonságai:
+        * neptun: a felhasználó neptun kódja, szöveges formátumban tárolva (String),
+        * password: a felhasználó jelszava, szöveges formátumban tárolva (String),
+        * role: a felhasználó szerepköre, enumként tárolva.
+    * list: A tantárgyak listája. Kódbeli reprezentációja a html subject-ek listázása.
+    * new: Új tantárgy felvételének lehetősége, űrlap oldal segítségével.
+    * update: Egy létező tantárgy módosításának lehetősége, űrlap oldal segítségével
+    * delete: Egy létező tantárgy törlésének lehetősége.
 
 ## Tervezés
 ## Implementáció
