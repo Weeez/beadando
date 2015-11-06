@@ -66,10 +66,14 @@ Rólunk</br>
 </br>
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/osztalymodell.jpg "")
 </br>
-4. Dinamikus működés: </br>
+4. Dinamikus működés: (szekvencia diagram)</br>
 </br>
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/diagram.jpg "")
 
 ## Implementáció
+* Fejlesztői környezet: Cloud 9 felhőalapú IDE, ami a www.c9.io linken keresztül elérhető. Virtuális gépként(szerverként) is tudjuk használni, amit szabadon szerkeszthetünk, valamint megoszthatunk másokkal és a kódunkba is betekintést engedhetünk.
+* Könyvtárstruktúrában lévő mappák funkciója: MVC modell alapján készült. A views mappa tartalmazza a megjelenítő réteget, a models fájljai írják le az adatok típusait, a controllers mappa tartalma pedig a végpont kezelésért felel. A további mappák a működést segítő fájlokat tartalmazzák.
+
+
 ## Tesztelés
 ## Felhasználói dokumentáció
