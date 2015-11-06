@@ -75,13 +75,44 @@ Rólunk</br>
 * __Könyvtárstruktúrában lévő mappák funkciója__: MVC modell alapján készült. A *_views_* mappa tartalmazza a megjelenítő réteget, a *_models_* fájljai írják le az adatok típusait, a *_controllers_* mappa tartalma pedig a végpont kezelésért felel. A *_további mappák_* a működést segítő fájlokat tartalmazzák.
 * Kódszerkezet:
     * *.tmp*
+        * __default.db__
+        * __disk.db__
     * *config*
+        * __config.js__   
     * *controllers*
+        * __aboutRourter.js__
+        * __indexRouter.js__
+        * __loginRouter.js__
+        * __logoutRouter.js__
+        * __regRouter.js__
+        * __subjectsRouter.js__
     * *models*
+        * __subject.js__
+        * __user.js__
     * *node_modules*
+        * *telepített keretrendszerek*
     * *public*
+        * *css*
+            * __bootstrap.min.css__
+        * *js*
+            * __bootstrap.min.js__
+            * __jquery.min.js__
+        * *lib*
+        * *pics*
+            * *dokumentációhoz szükséges képek*
     * *test*
+        * *test fájlok*
     * *views*
+        * *subjects*
+            * __list.hbs__
+            * __new.hbs__
+            * __update.hbs__
+        * *users*
+            * __login.hbs__
+            * __registration.hbs__
+        * __about.hbs__
+        * __index.hbs__
+        * __layout.hbs__
     * __package.json__
     * __README.md__
     * __server.js__
