@@ -62,7 +62,6 @@ Tárgyfelvétel</br>
 Új tárgy hozzáadása</br>
 Rólunk</br>
 </br>
-
 3. Osztálymodell
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/osztalymodell.jpg "")
 
