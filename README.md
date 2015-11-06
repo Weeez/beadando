@@ -53,22 +53,20 @@ Balázs András - QO728I - xeropax@gmail.com
         * Új tárgy hozzáadása
         * Rólunk
 
-2.Felhasználói felületmodell:
-Főoldal
-Bejelentkezés
-Kijelentkezés
-Regisztráció
-Tárgyfelvétel
-Új tárgy hozzáadása
-Rólunk
-
+2.Felhasználói felületmodell:</br>
+Főoldal</br>
+Bejelentkezés</br>
+Kijelentkezés</br>
+Regisztráció</br>
+Tárgyfelvétel</br>
+Új tárgy hozzáadása</br>
+Rólunk</br>
+</br>
 
 3. Osztálymodell
-
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/osztalymodell.jpg "")
 
 4. Dinamikus működés
-
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/diagram.jpg "")
 
 ## Implementáció
