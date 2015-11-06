@@ -63,7 +63,7 @@ Kijelentkezés</br>
 Regisztráció</br>
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/regisztracio.jpg "")
 Tárgyfelvétel</br>
-![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/tantargy.jpg "")
+![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/tantargyak.jpg "")
 Új tárgy hozzáadása</br>
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/uj_targy.jpg "")
 Rólunk</br>
