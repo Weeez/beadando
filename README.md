@@ -62,10 +62,13 @@ Tárgyfelvétel
 Új tárgy hozzáadása
 Rólunk
 
+
 3. Osztálymodell
+
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/osztalymodell.jpg "")
 
 4. Dinamikus működés
+
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/diagram.jpg "")
 
 ## Implementáció
