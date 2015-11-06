@@ -74,6 +74,7 @@ Rólunk</br>
 * __Fejlesztői környezet__: Cloud 9 felhőalapú IDE, ami a www.c9.io linken keresztül elérhető. Virtuális gépként(szerverként) is tudjuk használni, amit szabadon szerkeszthetünk, valamint megoszthatunk másokkal és a kódunkba is betekintést engedhetünk.
 * __Könyvtárstruktúrában lévő mappák funkciója__: MVC modell alapján készült. A *_views_* mappa tartalmazza a megjelenítő réteget, a *_models_* fájljai írják le az adatok típusait, a *_controllers_* mappa tartalma pedig a végpont kezelésért felel. A *_további mappák_* a működést segítő fájlokat tartalmazzák.
 </br>
+
 ## Tesztelés
 A tesztelés a __zombie.js__ nevű keretrendszerrel történik. Az API (Application Programming Interface) egyik nagy erőssége, hogy nincs szükség valódi böngészőre a kódunk futtatásához és ellenőrzéséhez, mert azt szimulálni képes. Másik érdeme, hogy a többi tesztkörnyezettel ellentétben rendkívül gyors.
 ## Felhasználói dokumentáció
