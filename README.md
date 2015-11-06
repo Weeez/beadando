@@ -72,7 +72,7 @@ Rólunk</br>
 
 ## Implementáció
 * __Fejlesztői környezet__: Cloud 9 felhőalapú IDE, ami a www.c9.io linken keresztül elérhető. Virtuális gépként(szerverként) is tudjuk használni, amit szabadon szerkeszthetünk, valamint megoszthatunk másokkal és a kódunkba is betekintést engedhetünk.
-* __Könyvtárstruktúrában lévő mappák funkciója__: MVC modell alapján készült. A views mappa tartalmazza a megjelenítő réteget, a models fájljai írják le az adatok típusait, a controllers mappa tartalma pedig a végpont kezelésért felel. A további mappák a működést segítő fájlokat tartalmazzák.
+* __Könyvtárstruktúrában lévő mappák funkciója__: MVC modell alapján készült. A *views* mappa tartalmazza a megjelenítő réteget, a *models* fájljai írják le az adatok típusait, a *controllers* mappa tartalma pedig a végpont kezelésért felel. A *további mappák* a működést segítő fájlokat tartalmazzák.
 
 
 ## Tesztelés
