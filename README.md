@@ -42,6 +42,29 @@ Balázs András - QO728I - xeropax@gmail.com
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/kep.jpg "")
 
 ## Tervezés
+1. Architectúra terv
+    * Oldaltérkép
+        * Főoldal
+        * Bejelentkezés / Kijelentkezés
+        * Regisztráció
+        * Tárgyfelvétel 
+            * Módosítás
+            * Törlés
+        * Új tárgy hozzáadása
+        * Rólunk
+
+2.Felhasználói felületmodell:
+Főoldal
+Bejelentkezés
+Kijelentkezés
+Regisztráció
+Tárgyfelvétel
+Új tárgy hozzáadása
+Rólunk
+
+3. Osztálymodell
+4. ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/osztalymodell.jpg "")
+
 ## Implementáció
 ## Tesztelés
 ## Felhasználói dokumentáció
