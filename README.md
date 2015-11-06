@@ -55,12 +55,19 @@ Balázs András - QO728I - xeropax@gmail.com
 
 2.Felhasználói felületmodell:</br>
 Főoldal</br>
+![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/fooldal.jpg "")
 Bejelentkezés</br>
+![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/bejelentkezes.jpg "")
 Kijelentkezés</br>
+![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/kijelentkezes.jpg "")
 Regisztráció</br>
+![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/regisztracio.jpg "")
 Tárgyfelvétel</br>
+![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/tantargyak.jpg "")
 Új tárgy hozzáadása</br>
+![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/uj_targy.jpg "")
 Rólunk</br>
+![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/rolunk.jpg "")
 </br>
 3. Osztálymodell:</br>
 </br>
