@@ -65,7 +65,7 @@ Rólunk</br>
 3. Osztálymodell:</br>
 </br>
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/osztalymodell.jpg "")
-
+</br>
 4. Dinamikus működés: </br>
 </br>
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/diagram.jpg "")
