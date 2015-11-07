@@ -146,11 +146,11 @@ A tesztelés a __zombie.js__ nevű keretrendszerrel történik. Az API (Applicat
 </br>
 Kipróbált tesztmódszer továbbá a __Selenium IDE__ nevű Mozilla bővítmény, mellyel rögzíthetjük egy művelet sorozat lejátszódását, majd tetszőleges számszor elismételtethetjük azt a programmal, hozzáírva új feltételeket.
 </br>
-Egységtesztek:
+1. Egységtesztek:
     * Főoldal megnyitása
     * Bejelentkezés
     * Regisztráció
-Tesztesetek: 
+2. Tesztesetek: 
     * Vendég módban a jogosulatlan végpontok nem elérhetőek, azok a __'/login'__ végpontra navigálnak
     * Bejelentkezést követően csak az a menüpont jelenik meg, amilyen szerepköre a felhasználónak van.
     * Tantárgylista megjelenik *student* szerepkörű felhasználónak, de módosítani nem tud a tartalmán.
