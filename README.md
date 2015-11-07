@@ -156,8 +156,7 @@ Kipróbált tesztmódszer továbbá a __Selenium IDE__ nevű Mozilla bővítmén
     * Tantárgylista megjelenik *student* szerepkörű felhasználónak, de módosítani nem tud a tartalmán.
     * Tantárgylista megjelenik *teacher* szerepkörű felhasználónak, módosítani tud a tartalmán, valamint új tárgyat is fel tud venni.
     * Regisztráció működik, alapértelmezett szerepkör a *student*.
-    * 
-</br>
+
 ## Felhasználói dokumentáció
 1. __A futtatáshoz ajánlott hardver-, szoftver konfiguráció:__ 
     * 2 GB memória
