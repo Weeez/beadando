@@ -5,8 +5,9 @@ Balázs András - QO728I - xeropax@gmail.com
 ------
 
 ## Követelmények
-
-Az oldal egy tantárgyfelvételhez szükséges tantárgylista megtekintéséhez, valamint kezeléséhez nyújt szolgáltatást.
+</br>
+Az oldal egy tantárgyfelvételhez szükséges tantárgylista megtekintéséhez, valamint kezeléséhez nyújt szolgáltatást.</br>
+</br>
 1. Funkcionális követelmények:
     * Az oldal tartalmához jogosulatlan személy nem férhet hozzá, csak a tájékoztató üzenetekhez. Ebből következik, hogy a regisztrált felhasználók között megkülönböztetünk szerepköröket, azaz különböző jogosultságokat.
     * Regisztrációt követően az új felhasználó 'hallgató' jogosultságot kap, amivel hozzáfér a tanárok által szerkesztett tárgylistához.
