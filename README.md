@@ -5,6 +5,7 @@ Balázs András - QO728I - xeropax@gmail.com
 ------
 
 ## Követelmények
+Az oldal egy tantárgyfelvételhez szükséges tantárgylista megtekintéséhez, valamint kezeléséhez nyújt szolgáltatást.
 1. Funkcionális követelmények:
     * Az oldal tartalmához jogosulatlan személy nem férhet hozzá, csak a tájékoztató üzenetekhez. Ebből következik, hogy a regisztrált felhasználók között megkülönböztetünk szerepköröket, azaz különböző jogosultságokat.
     * Regisztrációt követően az új felhasználó 'hallgató' jogosultságot kap, amivel hozzáfér a tanárok által szerkesztett tárgylistához.
@@ -34,6 +35,11 @@ Balázs András - QO728I - xeropax@gmail.com
     * update: Egy létező tantárgy módosításának lehetősége, űrlap oldal segítségével, html gombbal.
     * delete: Egy létező tantárgy törlésének lehetősége, html gombbal.
 4. Használatieset-modell:
+Szerepkörök:
+    * __teacher__ : Jogosult a tantárgylista megtekintésére, új elem felvételére, meglévő módosítására, törlésére.
+    * __student__ : Jogosult a tantárgylista megtekintésére.
+
+Használatieset-diagram:
 
 ![Ábra](https://raw.githubusercontent.com/weeez/beadando/master/public/pics/dokum.jpg "")
 
@@ -52,6 +58,16 @@ Balázs András - QO728I - xeropax@gmail.com
             * Törlés
         * Új tárgy hozzáadása
         * Rólunk
+    
+    * Végpontok:
+        * '/' - főoldal
+        * '/login' - bejelentkezés
+        * '/logout' - kijelentkezés
+        * '/about' - kapcsolatoldal
+        * 'subjects/list' - tantargyak listája
+        * 'subjects/new' - új tantárgy felvételep
+        * 'subjects/update/:id' - meglévő tárgy módosítása
+        * 'subjects/delete/:id' - meglévő tárgy törlése
 
 2.Felhasználói felületmodell:</br>
 Főoldal</br>
@@ -127,6 +143,8 @@ Rólunk</br>
 
 ## Tesztelés
 A tesztelés a __zombie.js__ nevű keretrendszerrel történik. Az API (Application Programming Interface) egyik nagy erőssége, hogy nincs szükség valódi böngészőre a kódunk futtatásához és ellenőrzéséhez, mert azt szimulálni képes. Másik érdeme, hogy a többi tesztkörnyezettel ellentétben rendkívül gyors.
+</br>
+Kipróbált tesztmódszer továbbá a __Selenium IDE__ nevű Mozilla bővítmény, mellyel rögzíthetjük egy művelet sorozat lejátszódását, majd tetszőleges számszor elismételtethetjük azt a programmal, hozzáírva új feltételeket.
 ## Felhasználói dokumentáció
 1. __A futtatáshoz ajánlott hardver-, szoftver konfiguráció:__ 
     * 2 GB memória

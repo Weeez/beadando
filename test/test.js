@@ -20,16 +20,30 @@ it('loggin', function(done) {
     this.timeout(8000);
     browser.visit('https://beadando-weeez.c9.io/login')
       .then(function() {
-        //browser.dump();
 
         assert.equal(browser.location.pathname, '/login', 'It is not the SO home page.');
         assert.ok(browser.success, 'It did not load successfully.');
-        assert.ok(browser.fill("neptun",'QO728I'));
-        assert.ok(browser.fill("password",'almafa'));
-        assert.ok(browser.pressButton('Submit'));
-        //console.log(browser.pressButton('Submit'));
-        assert.equal(browser.location.pathname, '/', 'It is not the SO home page.');
+
+        browser.fill('neptun','TANAR').fill('password','titok').pressButton('#Submit', function(){
+          browser.assert.redirected();
+        });
+
+              
       })
       .then(done, done);
   });  
+  
+it('registration', function(done) {
+    this.timeout(8000);
+    browser.visit('https://beadando-weeez.c9.io/registration')
+      .then(function() {
+
+        assert.equal(browser.location.pathname, '/registration', 'It is not the SO home page.');
+        assert.ok(browser.success, 'It did not load successfully.');
+        browser.fill('neptun','TesztUser').fill('password','teszt').pressButton('#Submit', function(){
+          browser.assert.redirected();
+        });
+      })
+      .then(done, done);
+  });    
 });
