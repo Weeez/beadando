@@ -150,4 +150,5 @@ Kipróbált tesztmódszer továbbá a __Selenium IDE__ nevű Mozilla bővítmén
     * 2 GB memória
     * 3.-ik / 4.-edik generációs i5 processzor
     * Windows 7 vagy újabb
+    * Google Chrome
 2. __A program használata:__ A felhasználó a kezdőoldalon találja magát, ahol 4 opció közül választhat. A __Főoldalra__ lép, ahol jelenleg is tartózkodik, a __Rólunk__ oldalra navigál, ami leírja az oldalról szükséges tudnivalókat, a __Bejelentkezés__ oldalra lép, ahol belép a saját fiókjába, és eléri az oldal rejtett funkcióit, vagy a __Regisztráció__ lehetőséget választja, ahol regisztrálhat magának új felhasználónevet és jelszót. A fiókba lépés esetén átnavigál a főoldalra, és belép is a felhasználói fiókjába. A regisztrált felhasználónak egy új opció nyílik meg, a __Tárgyfelvétel__, ahol megnézheti milyen tantárgyak közül választhat. Ha a felhasználónak van *tanári* jogosultsága, akkor lehetősége van a tantárgylista tartalmának szerkesztésére, az __Új tárgy felvétele__ menüponttal valamint a __módosítás__ és __törlés__ gombok segítségével. Ha a felhasználó végzett, a __Kijelentkezés__ menüponttal kilépet a fiókjából, és visszatérhet a főoldalra.
