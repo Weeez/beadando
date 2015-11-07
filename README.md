@@ -145,6 +145,19 @@ Rólunk</br>
 A tesztelés a __zombie.js__ nevű keretrendszerrel történik. Az API (Application Programming Interface) egyik nagy erőssége, hogy nincs szükség valódi böngészőre a kódunk futtatásához és ellenőrzéséhez, mert azt szimulálni képes. Másik érdeme, hogy a többi tesztkörnyezettel ellentétben rendkívül gyors.
 </br>
 Kipróbált tesztmódszer továbbá a __Selenium IDE__ nevű Mozilla bővítmény, mellyel rögzíthetjük egy művelet sorozat lejátszódását, majd tetszőleges számszor elismételtethetjük azt a programmal, hozzáírva új feltételeket.
+</br>
+Egységtesztek:
+    * Főoldal megnyitása
+    * Bejelentkezés
+    * Regisztráció
+Tesztesetek: 
+    * Vendég módban a jogosulatlan végpontok nem elérhetőek, azok a __'/login'__ végpontra navigálnak
+    * Bejelentkezést követően csak az a menüpont jelenik meg, amilyen szerepköre a felhasználónak van.
+    * Tantárgylista megjelenik *student* szerepkörű felhasználónak, de módosítani nem tud a tartalmán.
+    * Tantárgylista megjelenik *teacher* szerepkörű felhasználónak, módosítani tud a tartalmán, valamint új tárgyat is fel tud venni.
+    * Regisztráció működik, alapértelmezett szerepkör a *student*.
+    * 
+</br>
 ## Felhasználói dokumentáció
 1. __A futtatáshoz ajánlott hardver-, szoftver konfiguráció:__ 
     * 2 GB memória
