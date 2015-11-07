@@ -35,9 +35,9 @@ Az oldal egy tantárgyfelvételhez szükséges tantárgylista megtekintéséhez,
     * update: Egy létező tantárgy módosításának lehetősége, űrlap oldal segítségével, html gombbal.
     * delete: Egy létező tantárgy törlésének lehetősége, html gombbal.
 4. Használatieset-modell:
-Szerepkörök:
-    * __teacher__ : Jogosult a tantárgylista megtekintésére, új elem felvételére, meglévő módosítására, törlésére.
-    * __student__ : Jogosult a tantárgylista megtekintésére.
+    *   Szerepkörök:
+        * __teacher__ : Jogosult a tantárgylista megtekintésére, új elem felvételére, meglévő módosítására, törlésére.
+        * __student__ : Jogosult a tantárgylista megtekintésére.
 
 Használatieset-diagram:
 
